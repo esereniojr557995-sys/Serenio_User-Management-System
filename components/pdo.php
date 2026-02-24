@@ -2,9 +2,11 @@
 // components/pdo.php
 // Database configuration — update these values to match your environment
 
-define('DB_NAME', 'usercore');  // ← already set
-define('DB_USER', 'root');      // ← XAMPP default
-define('DB_PASS', '');          // ← XAMPP default (blank)
+define('DB_HOST', 'localhost');
+define('DB_NAME', 'usercore');   // ← matches your professor's SQL database name
+define('DB_USER', 'root');       // Change to your MySQL username (usually 'root' in XAMPP)
+define('DB_PASS', '');           // Change to your MySQL password (usually blank in XAMPP)
+define('DB_CHARSET', 'utf8mb4');
 
 function getPDO(): PDO {
     static $pdo = null;
